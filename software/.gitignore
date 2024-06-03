@@ -1,0 +1,6 @@
+*.jar
+ionmesh
+sage
+sage*.tar.gz
+sage*/
+ionmesh_repo/

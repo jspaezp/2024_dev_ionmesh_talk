@@ -1,0 +1,47 @@
+[denoise_config]
+mz_scaling = 0.015
+max_mz_expansion_ratio = 1.5
+ims_scaling = 0.015
+max_ims_expansion_ratio = 5.0
+ms2_min_n = 5
+ms1_min_n = 10
+ms1_min_cluster_intensity = 100
+ms2_min_cluster_intensity = 50
+
+[tracing_config]
+mz_scaling = 0.015
+max_mz_expansion_ratio = 1.5
+rt_scaling = 2.4
+max_rt_expansion_ratio = 3.0
+ims_scaling = 0.02
+max_ims_expansion_ratio = 4.0
+min_n = 3
+min_neighbor_intensity = 450
+
+[pseudoscan_generation_config]
+rt_scaling = 2.4
+max_rt_expansion_ratio = 5.0
+quad_scaling = 5.0
+max_quad_expansion_ratio = 1.0
+ims_scaling = 0.015
+max_ims_expansion_ratio = 2.0
+min_n = 6
+min_neighbor_intensity = 6000
+
+[sage_search_config]
+static_mods = [[
+    "C",
+    57.0215,
+]]
+variable_mods = [
+    ["M", [15.9949]],
+    ["S", [79.966331]],
+    ["T", [79.966331]],
+    ["Y", [79.966331]]
+]
+fasta_path = "data/UP000005640_9606_crap_prtc.fasta"
+
+[output_config]
+out_features_csv = "features.csv"
+debug_traces_csv = "debug_traces.csv"
+debug_scans_json = "debug_scans.json"
